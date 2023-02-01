@@ -24,7 +24,7 @@ export default function Perfil(props){
          }, []);
           function mudarFoto(){
             const promise =  axios.put(
-                'http://54.158.210.134:5000/api/mudarfoto',
+                'http://localhost:5000/api/mudarfoto',
                 {foto},{headers: {
                     authorization : token
                 }}
