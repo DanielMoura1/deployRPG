@@ -35,7 +35,7 @@ export default function Sel(props){
     useEffect(() => {
         async function getpg1(){
          try{
-            const promessa=await axios.get('http://localhost:5000/api/selecao',{headers: {
+            const promessa=await axios.get('http://54.158.210.134:5000/api/selecao',{headers: {
                 authorization : token
              }})
              setCard(promessa.data)
@@ -52,7 +52,7 @@ export default function Sel(props){
     async function b(){
         try {
             if(num===10){
-            const resposta = await axios.post(`http://localhost:5000/api/adicionar`,cards,{headers: {
+            const resposta = await axios.post(`http://54.158.210.134:5000/api/adicionar`,cards,{headers: {
                 authorization : token
              }})
             
