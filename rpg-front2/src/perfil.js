@@ -9,7 +9,7 @@ export default function Perfil(props){
     useEffect(() => {
            async function getpg3(){
             try{//https://daniel-moura-rpg.herokuapp.com/inimigos
-               const promessa=await axios.get('https://localhost:5000/api/perfil',{headers: {
+               const promessa=await axios.get('http://localhost:5000/api/perfil',{headers: {
                    authorization : token
                 }})
                 setPerfil(promessa.data)
@@ -24,7 +24,7 @@ export default function Perfil(props){
          }, []);
           function mudarFoto(){
             const promise =  axios.put(
-                'https://localhost:5000/api/mudarfoto',
+                'http://localhost:5000/api/mudarfoto',
                 {foto},{headers: {
                     authorization : token
                 }}
