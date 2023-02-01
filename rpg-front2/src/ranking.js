@@ -13,7 +13,7 @@ export default function Ranking(props){
     useEffect(() => {
            async function getpg3(){
             try{//https://daniel-moura-rpg.herokuapp.com/inimigos
-               const promessa=await axios.get('https://localhost:5000/api/rank',{headers: {
+               const promessa=await axios.get('http://localhost:5000/api/rank',{headers: {
                    authorization : token
                 }})
                 setPerfil(promessa.data)
