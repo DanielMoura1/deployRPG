@@ -51,7 +51,7 @@ export default function Loja(props){
         async function getpg1(){
          try{
             //mudar
-            const promessa=await axios.get('http://localhost/api/loja',{headers: {
+            const promessa=await axios.get('http://54.158.210.134/api/loja',{headers: {
                 authorization : token
              }})
              setCard(promessa.data)
@@ -64,7 +64,7 @@ export default function Loja(props){
         }
         async function getpg2(){
             try{//https://daniel-moura-rpg.herokuapp.com/inimigos
-               const promessa=await axios.get('http://localhost/api/perfil',{headers: {
+               const promessa=await axios.get('http://54.158.210.134/api/perfil',{headers: {
                    authorization : token
                 }})
                 setPerfil(promessa.data)
@@ -81,7 +81,7 @@ export default function Loja(props){
         if( cards[0].ouroCard[0].ouro<=perfil[0].ouro ){
             try {
                     //mudar
-                const resposta = await axios.post(`http://localhost/api/loja`,cards,{headers: {
+                const resposta = await axios.post(`http://54.158.210.134/api/loja`,cards,{headers: {
                     authorization : token
                 }})
                 
