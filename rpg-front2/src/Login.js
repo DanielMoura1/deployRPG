@@ -28,7 +28,7 @@ export default function Login(props){
         }
         //http://localhost:5000/ 
         try {
-            const resposta = await axios.post(`http://54.158.210.134/api/login`, {
+            const resposta = await axios.post(`http://54.236.47.96/api/login`, {
                 email: email, senha: senha
             })
             token =resposta.data
