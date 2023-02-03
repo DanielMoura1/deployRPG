@@ -29,7 +29,7 @@ export default function Cadastro(props){
             return alert('Nome não pode ter mais que 15 caracteres')
         }
         try {//https://daniel-moura-rpg.herokuapp.com/
-            const resposta = await axios.post(`http://54.158.210.134:5000/api/cadastro`, {
+            const resposta = await axios.post(`http://54.158.210.134/api/cadastro`, {
                 email: email, senha: senha,nome:nome
             })
             
