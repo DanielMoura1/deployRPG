@@ -21,7 +21,7 @@ const foto ='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgV
           res.send(token);
       }catch(error){
           console.log( '???')
-          res.status(500).send(error)
+          res.status(400).send(error)
       } 
 }
 export async function login(req: Request, res: Response) { 
