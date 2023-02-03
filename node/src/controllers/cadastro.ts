@@ -9,19 +9,24 @@ const foto ='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgV
   export async function cadastro(req: Request, res: Response) { 
     const body = req.body;
     const { authorization } = req.headers;
+    let er ='e1'
       try{
           const token =  uuid();
+          er ='e2'
           const email= await cadastroService.buscarEmail(body.email);
+          er ='e3'
           if(email.length>0){
             console.log(email)
             console.log('erro')
             return res.status(404).send('Email já em uso')
           }
+          er ='e4'
           await cadastroService.cadastro(body.email,body.senha,body.nome,token);
+          er ='e5'
           res.send(token);
       }catch(error){
           console.log( '???')
-          res.status(400).send(error)
+          res.status(400).send(er)
       } 
 }
 export async function login(req: Request, res: Response) { 
