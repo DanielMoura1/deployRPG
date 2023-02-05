@@ -7,7 +7,7 @@ const deck_1 = require("../controllers/deck");
 const perfil_1 = require("../controllers/perfil");
 const ranking_1 = require("../controllers/ranking");
 const schemaCadatro_1 = require("../schemas/schemaCadatro");
-const validarSchema_1 = require("./../middlewares/validarSchema");
+const validarSchema_1 = require("../middlewares/validarSchema");
 const authRouter = (0, express_1.Router)();
 authRouter.get('/selecao', deck_1.selecao);
 authRouter.get('/criarUser', deck_1.BuscarSeuDeck);

@@ -21,19 +21,24 @@ function cadastro(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         const body = req.body;
         const { authorization } = req.headers;
+        let ar = '1';
         try {
             const token = (0, uuid_1.v4)();
+            ar = '2';
             const email = yield cadastro_1.default.buscarEmail(body.email);
+            ar = '3';
             if (email.length > 0) {
                 console.log(email);
                 console.log('erro');
-                return res.status(500).send('Email já em uso');
+                return res.status(404).send('Email já em uso');
             }
+            ar = '4';
             yield cadastro_1.default.cadastro(body.email, body.senha, body.nome, token);
+            ar = '5';
             res.send(token);
         }
         catch (error) {
-            console.log('???');
+            console.log(ar);
             res.status(500).send(error);
         }
     });
