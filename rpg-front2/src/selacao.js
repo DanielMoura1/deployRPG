@@ -52,7 +52,7 @@ export default function Sel(props){
     async function b(){
         try {
             if(num===10){
-            const resposta = await axios.post(`http://54.236.47.96/api/adicionar`,cards,{headers: {
+            const resposta = await axios.post(`http://35.168.8.150/api/adicionar`,cards,{headers: {
                 authorization : token
              }})
             

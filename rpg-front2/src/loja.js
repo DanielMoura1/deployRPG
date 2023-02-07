@@ -81,7 +81,7 @@ export default function Loja(props){
         if( cards[0].ouroCard[0].ouro<=perfil[0].ouro ){
             try {
                     //mudar
-                const resposta = await axios.post(`http://54.236.47.96/api/loja`,cards,{headers: {
+                const resposta = await axios.post(`http://35.168.8.150/api/loja`,cards,{headers: {
                     authorization : token
                 }})
                 
