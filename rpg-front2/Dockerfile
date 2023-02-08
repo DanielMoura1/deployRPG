@@ -1,4 +1,4 @@
-FROM node:19
+FROM node:16
 
 # pasta para aonde vai o build
 WORKDIR /app
