@@ -10,7 +10,7 @@ import Perfil from "./perfil.js";
 import Rank from "./ranking.js";
 import Loja from "./loja.js"
 export default  function App() {
- 
+      
   const [card,setCard] =useState([])
   const [deck,setDeck] =useState([])
   const localStorageTeste = JSON.parse(localStorage.getItem('token'))
